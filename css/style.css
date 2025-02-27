@@ -93,6 +93,7 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 }
 [class*="__container"]{
   max-width: 1480px;
@@ -112,6 +113,24 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0px 37px;
+}
+.main__button {
+  background-color: #fff;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  color: #000 !important;
+  padding: 10px;
+  justify-content: flex-end;
+  max-width: 282px;
+  width: 100%;
+  gap: 25px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+.main__button > a {
+  color: #000;
 }
 /* Header ============================================================================ */
 .header {
@@ -167,7 +186,7 @@ body{
 .header__contacts_numbers {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  align-items: flex-end;
 }
 .header__contacts_numbers p {
   font-size: 13px;
@@ -189,6 +208,21 @@ body{
   height: calc(100dvh + 140px);
   padding-bottom: 140px;
 }
+.main > svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.main > img {
+  margin-top: 100%;
+}
+.clip-shape {
+  width: 400px;
+  height: 50px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 81% 0%, 100% 52%, 100% 100%, 0% 100%);
+}
 .main__container {
   padding-top: 195px;
 }
@@ -200,14 +234,46 @@ body{
 .main__title {
   font-size: 55px;
   font-weight: 600;
+  color: #fff;
+  max-width: 827px;
+  line-height: 100%;
+  margin: 24px 0px 30px 0px;
 }
 .main__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  opacity: 0.7;
+  max-width: 546px;
+  margin-bottom: 54px;
 }
 .main__buttons {
+  display: flex;
+  align-items: center;
+  gap: 17px;
 }
-.main__button {
+.main__buttons > a {
+  color: #fff;
 }
 .main__trans_button {
+  text-transform: uppercase;
+  font-weight: 600;
+  max-width: 230px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 69px;
+  border-radius: 100px;
 }
 .main__play {
+  width: 51px;
+  height: 51px;
+  background-image: url(../img/svg/pause.svg);
+  margin-left: auto;
+}
+.main__play.active {
+  background-image: url(../img/svg/play.svg);
 }
