@@ -137,6 +137,7 @@ body{
   position: absolute;
   top: 29px;
   width: 100%;
+  z-index: 1;
 }
 .header__container {
   display: flex;
@@ -200,6 +201,7 @@ body{
 }
 /* MAIN SECTION ======================================================================= */
 .main {
+  position: relative;
   background-image: url(../img/jpg/main-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -208,20 +210,10 @@ body{
   height: calc(100dvh + 140px);
   padding-bottom: 140px;
 }
-.main > svg {
+.main > img {
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 100%;
-}
-.main > img {
-  margin-top: 100%;
-}
-.clip-shape {
-  width: 400px;
-  height: 50px;
-  background-color: white;
-  clip-path: polygon(0% 0%, 81% 0%, 100% 52%, 100% 100%, 0% 100%);
+  left: 0;
 }
 .main__container {
   padding-top: 195px;
