@@ -38,3 +38,12 @@ var newsSwiper = new Swiper('.news__swiper', {
     },
     loop: true,
 });
+var gallerySwiper = new Swiper('.gallery-container', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.gallery__arrow-right',
+        prevEl: '.gallery__arrow-left',
+    },
+    loop: true,
+});
