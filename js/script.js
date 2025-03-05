@@ -27,7 +27,7 @@ $(document).ready(function() {
     
 })
 
-// SWIPER
+// SWIPERS
 var swiper = new Swiper('.main__swiper', {
     slidesPerView: 1,
     loop: true,
@@ -62,7 +62,15 @@ var gallerySwiper = new Swiper('.gallery-container', {
     },
     loop: true,
 });
-
+var compSwiper = new Swiper('.comp__swiper', {
+    slidesPerView: 7,
+    spaceBetween: 16,
+    navigation: {
+        nextEl: '.comp__arrow-right',
+        prevEl: '.comp__arrow-left',
+    },
+    loop: true,
+});
 // INPUT TEL LIBRARY
 document.addEventListener("DOMContentLoaded", function() {
     var input = document.querySelector(".form_number");
@@ -77,23 +85,17 @@ document.addEventListener("DOMContentLoaded", function() {
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
     });
 });
-///////////////////////////////////////////////////////////////////////////////////
-document.querySelectorAll(".rep__app_card").forEach((card, index) => {
-    const fileInput = card.querySelector("input[type=file]");
-    const fileList = card.querySelector(".file-list");
+// INPUT FILES FUNCTION
+document.querySelectorAll(".rep__card").forEach((card) => {
+    const fileInput = card.querySelector(".rep__card_file");
+    const fileList = card.querySelector(".rep__cards_files");
 
     if (!fileInput || !fileList) return;
-
-    // Добавляем уникальный класс file-list-N
-    const uniqueClass = `file-list-${index}`;
-    fileList.classList.add(uniqueClass);
 
     let uploadedFiles = [];
 
     fileInput.addEventListener("change", function () {
         if (fileInput.files.length > 0) {
-            fileList.classList.remove("hidden");
-
             Array.from(fileInput.files).forEach((file) => {
                 if (!uploadedFiles.some(f => f.name === file.name)) {
                     uploadedFiles.push(file);
@@ -111,8 +113,9 @@ document.querySelectorAll(".rep__app_card").forEach((card, index) => {
             listItem.classList.add("file-item");
 
             listItem.innerHTML = `
+                <img src="../img/svg/file.svg"></img>
                 <span class="file-name">${file.name}</span>
-                <button class="remove-file" data-index="${idx}">✖</button>
+                <button class="remove-file" data-index="${idx}"></button>
             `;
 
             fileList.appendChild(listItem);

@@ -12,7 +12,7 @@
     <body>
         <header class="header">
             <div class="header__container">
-                <a href="##" class="header__logo">
+                <a href="./index.html" class="header__logo">
                     <img src="./img/svg/logo.png" alt="logo" />
                 </a>
                 <nav class="header__nav">
@@ -101,32 +101,121 @@
                                 <span>Подача заявки</span>
                                 <img src="./img/svg/application-user.svg" alt="#">
                             </div>
-                            <div class="rep__app_load">
+                            <a href="##" download="" class="rep__app_load">
                                 <div class="rep__app_download">
                                     <p>Анкета для кандидатов <span>(для заполнения)</span></p>
                                     <span>Скачать файл, docx</span>
                                 </div>
                                 <img src="./img/svg/download.svg" alt="#">
-                            </div>
+                            </a>
                             <div class="rep__app_info">
                                 <img src="./img/svg/info.svg" alt="#">
                                 <span>Пожалуйста, скачайте, заполните, и загрузите на сайт заполненную анкету и перечень указанных документов в электронном виде.</span>
                             </div>
                             <div class="rep__app_secondary">Загрузите документы на сайт</div>
                             <div class="rep__app_restriction">Форматы: PDF или .jpg, размер до 5мб</div>
-                            <div class="rep__app_buttons">
-                                <div class="rep__app_card">
-                                    <div class="rep__app_file-label">1. Заполненная анкета</div>
-                                    <label for="file-upload" class="custom-file-label">Выбрать файлы</label>
-                                    <input type="file" id="file-upload" multiple hidden>
-                                    <ul id="file-list" class="file-list hidden"></ul>
+                            <div class="rep__cards">
+                                <div class="rep__card">
+                                    <div class="rep__card_title">1. Заполненная анкета</div>
+                                    <label for="rep__card_form" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_form" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
                                 </div>
-                                <div class="rep__app_card">
-                                    <div class="rep__app_file-label">2. Паспорт</div>
-                                    <label for="file-upload" class="custom-file-label">Выбрать файлы</label>
-                                    <input type="file" id="file-upload" multiple hidden>
-                                    <ul id="file-list" class="file-list hidden"></ul>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">2. Паспорт</div>
+                                    <label for="rep__card_passport" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_passport" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
                                 </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">3. ИНН</div>
+                                    <label for="rep__card_inn" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_inn" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">4. ИНПС</div>
+                                    <label for="rep__card_inps" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_inps" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">5. Диплом</div>
+                                    <label for="rep__card_diploma" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_diploma" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">6. Трудовая книжка</div>
+                                    <label for="rep__card_workbook" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_workbook" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">7. Выписка из ЕНТС (Yagonamilliy mehnat tizimi)</div>
+                                    <label for="rep__card_ents" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_ents" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">8. Медицинская справка 086</div>
+                                    <label for="rep__card_medical" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_medical" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">9. Выписка из ЕНТС (Yagonamilliy mehnat tizimi)</div>
+                                    <label for="rep__card_ents2" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_ents2" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">10. Медицинская справка 086</div>
+                                    <label for="rep__card_medical2" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_medical2" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">11. Военный билет либо приписное свидетельство (с личной подписью)</div>
+                                    <label for="rep__card_military" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_military" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">12. Свидетельство о браке</div>
+                                    <label for="rep__card_marriage" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_marriage" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">13. Метрика либо паспорта (ID карта) детей</div>
+                                    <label for="rep__card_children" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_children" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">14. Фото 3х4 на белом фоне, дресс код официальное</div>
+                                    <label for="rep__card_photo" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_photo" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">15. Характеристика с последнего места работы</div>
+                                    <label for="rep__card_reference" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_reference" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                                <div class="rep__card">
+                                    <div class="rep__card_title">16. Справка о несудимости</div>
+                                    <label for="rep__card_criminal" class="rep__card_form">Выбрать файлы</label>
+                                    <input id="rep__card_criminal" class="rep__card_file" type="file" multiple hidden>
+                                    <ul class="rep__cards_files"></ul>
+                                </div>
+                            </div>
+                            <div class="rep__buttons">
+                                <input id="rep-checkbox" type="checkbox">
+                                <label for="rep-checkbox">Я согласен на обработку моих персональных данных в соответствии с информацией о защите персональных данных.</label>
+                                <button class="orange-button rep__submit">подать заявку</button>
                             </div>
                         </div>
                     </div>
