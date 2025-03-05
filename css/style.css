@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   --additional: #061862;
 }
 body{
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 15px;
   color: var(--maincolor);
 }
@@ -265,6 +265,7 @@ body{
   font-weight: 600;
   line-height: 50px;
   color: var(--maincolor);
+  text-transform: uppercase;
 }
 .title > span {
   opacity: 0.5;
@@ -371,7 +372,7 @@ body{
   opacity: 0;
   visibility: hidden;
 }
-.header__list_item-earth:hover .header__lang_list {
+.header__list_item-earth.active .header__lang_list {
   top: 30px;
   opacity: 1;
   visibility: visible;
@@ -416,7 +417,6 @@ body{
 /* MAIN SECTION ======================================================================= */
 .main {
   position: relative;
-  background-image: url(../img/jpg/main-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -455,6 +455,7 @@ body{
   max-width: 827px;
   line-height: 61px;
   margin: 24px 0px 30px 0px;
+  text-transform: uppercase;
 }
 .main__subtitle {
   font-size: 18px;
@@ -1129,15 +1130,25 @@ body{
   flex-direction: column;
   gap: 48px;
 }
-.qa__column_form input, .qa__column_form textarea{
+.qa__column_form input{
   background-color: transparent;
   border-bottom: 1px solid #7676765f;
-  padding-bottom: 23px; 
+  resize: none;
+  height: 47px;
+}
+.qa__column_form textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #7676765f;
   resize: none;
 }
 .form_name {
 }
 .form_number {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 10px 20px 50px  !important;
+  padding-left: 50px !important;
 }
 .form_comment {
   height: 144px;
@@ -1252,7 +1263,7 @@ body{
   height: 100%;
   padding-bottom: 42px;
 }
-.breadcrumbs__pages {
+.breadcrumbs__pages, .breadcrumbs__pages > a {
   color: #fff;
   display: flex;
   align-items: center;
@@ -1781,3 +1792,450 @@ body{
   background-color: var(--secondary);
   color: #fff;
 }
+/* CONTACT SECTION ================================================================================== */
+.contact {
+  margin: 90px 0px 103px 0px;
+}
+.contact__container {
+}
+.contact__columns {
+  display: flex;
+  gap: 61px;
+}
+.contact_contact {
+  flex: 0 1 30%;
+}
+.contact__subtitle {
+  margin-bottom: 29px;
+}
+.contact__title {
+  margin-bottom: 77px;
+}
+.contact__number_label {
+  color: rgba(128, 128, 128, 1);
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.contact__number_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.contact__number_item > a{
+  font-size: 24px;
+  color: var(--additional);
+  font-weight: 500;
+}
+.contact__mail_item > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--additional);
+}
+.contact__mail_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.contact_contact > p {
+  font-weight: 500;
+  color: var(--additional);
+  line-height: 23px;
+  margin-bottom: 40px;
+}
+.contact__socials {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.contact__map {
+  flex: 1 1 auto;
+}
+.contact__location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 50px;
+  margin-top: 72px;
+}
+.contact__map_map {
+  height: calc(100% - 137px);
+}
+.contact__map_map > iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+.career__subtitle {
+  max-width: 635px;
+}
+/* VACANCY SECTION ============================================================================ */
+.vacancy {
+  margin: 132px 0px 114px 0px;
+}
+.vacancy__main {
+  height: 100dvh !important;
+  padding-bottom: 150px;
+}
+.vacancy__slide > img {
+  height: 100%;
+}
+.vacancy__container {
+}
+.vacancy__subtitle {
+  margin-bottom: 29px;
+}
+.vacancy__title {
+  max-width: 607px;
+}
+.vacancy__columns {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 63px;
+  padding: 68px 0px;
+  margin: 56px 0px 93px 0px;
+}
+.vacancy__columns::before, .vacancy__columns::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background-color: rgba(217, 217, 217, 1);
+  width: 100%;
+}
+.vacancy__columns::before {
+  top: 0;
+}
+.vacancy__columns::after {
+  bottom: 0;
+}
+.vacancy__columns > p{
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+}
+.vacancy__vacancy_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.vacancy__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.vacancy_box_title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+.vacancy__box_subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(128, 128, 128, 1);
+}
+.vacancy__user {
+  margin-bottom: 14px;
+}
+.vacancy__cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.vacancy__card {
+}
+.vacancy__card:hover .vacancy__button{
+  background-color: var(--secondary);
+}
+.vacancy__button svg path{
+  transition: 0.3s ease all;
+}
+.vacancy__card:hover .vacancy__button svg path{
+  fill: #fff;
+}
+.vacancy__card_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin-left: 20px;
+  margin: 24px 20px 12px;
+}
+.vacancy__card_vacancy {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(179, 179, 179, 1);
+  margin-left: 20px;
+}
+.vacancy__image {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.vacancy__button {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease all;
+}
+.vacancy__image {
+}
+/* WORK SECTION ============================================================================== */
+.work {
+  margin-bottom: 159px;
+}
+.work__container {
+}
+.work__subtitle {
+  margin-bottom: 29px;
+}
+.work__title {
+  max-width: 562px;
+  margin-bottom: 55px;
+}
+.work__columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 73px;
+  margin: 63px 0px 84px 0px;
+}
+.work__columns > p {
+  font-size: 16px;  
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 24px;
+}
+.work__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.work__cards_image {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.work__cards_columns {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+/* REP SECTION ============================================================================== */
+.rep {
+  margin: 90px 0px 146px 0px;
+}
+.rep__container {
+}
+.rep__columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.rep__subtitle {
+  color: var(--secondary);
+  font-size: 16px;  
+  font-weight: 600;
+}
+.rep__title {
+  font-size: 32px;
+  font-weight: 500;
+  color: black;
+  margin: 29px 0px 70px 0px;
+}
+.rep__text_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  line-height: 26px;
+}
+.rep__text_text {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  line-height: 26px;
+  max-width: 626px;
+}
+.rep__list {
+
+}
+.rep__list_item {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  line-height: 26px;
+  padding-left: 20px;
+}
+.rep__list_item::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+.rep__app {
+  border-radius: 30px;
+  background-color: #F6F5FF;
+  padding: 42px;
+}
+.rep__app_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rep__app_title > span {
+  font-size: 20px;
+  color: var(--additional);
+  font-weight: 500;
+
+}
+.rep__app_load {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 38px 0px 22px 0px;
+  max-width: 467px;
+}
+.rep__app_download {
+  display: flex;
+  flex-direction: column;
+}
+.rep__app_download > p > span{
+  font-size: 15px;
+  line-height: 26px;
+  color: #0000007a;
+}
+.rep__app_download > p {
+  line-height: 26px;
+  color: black;
+}
+.rep__app_download > span {
+  font-size: 12px;
+  line-height: 18px;
+  color: #0000007a;
+}
+.rep__app_info {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #0000007a;
+  margin-bottom: 45px;
+}
+.rep__app_secondary {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+.rep__app_restriction {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  color: #0000007a;
+  margin-bottom: 61px;
+}
+.rep__app_restriction::after {
+  content: '';
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: var(--secondary);
+  background-color: var(--secondary);
+}
+.rep__app_buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.rep__app_card {
+  display: flex;  
+  flex-direction: column;
+  gap: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--maincolor);
+}
+/* */
+/* Стилизация кнопки выбора файлов */
+.custom-file-label {
+  display: block;
+  padding: 12px 20px;
+  background-color: white;
+  color: var(--additional);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+/* Список загруженных файлов */
+.file-list {
+  margin-top: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Стиль отдельного файла */
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.file-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.file-name {
+  color: var(--additional);
+  font-size: 14px;
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.rep__app_file-label {
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 500;
+  color: var(--maincolor);
+}
+/* */
