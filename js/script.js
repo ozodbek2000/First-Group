@@ -7,9 +7,24 @@ $(document).ready(function() {
             swiper.autoplay.start(); // Start autoplay if not active
         }
     })
+    $('.header__burger').click(function(event) {
+        $(this).toggleClass('active');
+        $('.header__nav').toggleClass('active');
+    })
+    if ($(window).width() <= 767) {
+        $('.header__list_item').click(function(event) {
+            $(this).toggleClass('active');
+        });
+    }
     $('.qa__dropdown_question').click(function(event) {
         $(this).parent('.qa__dropdown').toggleClass('active');
     })
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.header__burger, .header__nav').length) {
+            $('.header__burger').removeClass('active');
+            $('.header__nav').removeClass('active');
+        }
+    });
     function toggleEarthActive() {
         setTimeout(() => {
             if (!$('.header__list_item-earth:hover').length && !$('.header__lang_list:hover').length) {
@@ -18,11 +33,27 @@ $(document).ready(function() {
         }, 200);
     }
 
+
     $('.header__list_item-earth, .header__lang_list').hover(
         function() {
             $('.header__list_item-earth').addClass('active');
         },
         toggleEarthActive
+    );
+    
+    function toggleServiceActive() {
+        setTimeout(() => {
+            if (!$('.header__list_item:hover').length && !$('.header__list_services:hover').length) {
+                $('.header__list_services').removeClass('active');
+            }
+        }, 200);
+    }
+
+    $('.header__list_item').hover(
+        function() {
+            $(this).children('.header__list_services').addClass('active');
+        },
+        toggleServiceActive
     );
     
 })
@@ -37,12 +68,17 @@ var swiper = new Swiper('.main__swiper', {
     },
 });
 var keySwiper = new Swiper('.key__swiper', {
-    slidesPerView: 7,
+    slidesPerView: 3.5,
     spaceBetween: 16,
     navigation: {
         nextEl: '.key__arrow-right',
         prevEl: '.key__arrow-left',
     },
+    breakpoints: {
+        767: {
+            slidesPerView: 7,
+        }
+    }
 });
 var newsSwiper = new Swiper('.news__swiper', {
     slidesPerView: 4,
@@ -70,6 +106,16 @@ var compSwiper = new Swiper('.comp__swiper', {
         prevEl: '.comp__arrow-left',
     },
     loop: true,
+});
+var keyCardsSwiper = new Swiper('.key__cards', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 3,
+        }
+    }
 });
 // INPUT TEL LIBRARY
 document.addEventListener("DOMContentLoaded", function() {

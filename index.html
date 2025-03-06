@@ -12,19 +12,35 @@
     <body>
         <header class="header">
             <div class="header__container">
-                <a href="./index.html" class="header__logo">
-                    <img src="./img/svg/logo.png" alt="logo" />
-                </a>
+                <div class="header__logo_box">
+                    <a href="./index.html" class="header__logo">
+                        <img src="./img/svg/logo.png" alt="logo" />
+                    </a>
+                    <div class="header__burger">
+
+                    </div>
+                </div>
                 <nav class="header__nav">
                     <ul class="header__list">
+                        <li class="mobile-only">Навигация</li>
                         <li class="header__list_item">
                             <a href="##">Главная</a>
                         </li>
                         <li class="header__list_item">
                             <a href="##"
                                 >Услуги
-                                <img src="./img/svg/polygon.svg" alt="#"
-                            /></a>
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 5.5L9.33013 0.25H0.669873L5 5.5Z" fill="white" fill-opacity="0.5"/>
+                                </svg>
+                            </a>
+                            <ul class="header__list_services">
+                                <li class="header__list_service"><a href="##">Дистрибьюция</a></li>
+                                <li class="header__list_service"><a href="##">Логистика и склад</a></li>
+                                <li class="header__list_service"><a href="##">Маркетинговая поддержка</a></li>
+                                <li class="header__list_service"><a href="##">Управление продажами</a></li>
+                                <li class="header__list_service"><a href="##">Консалтинговые услуги</a></li>
+                                <li class="header__list_service"><a href="##">Сервисная поддержка</a></li>
+                            </ul>
                         </li>
                         <li class="header__list_item">
                             <a href="##">О компании</a>
@@ -37,20 +53,21 @@
                         </li>
                         <li class="header__list_item"><a href="##">Блог</a></li>
                         <li class="header__list_item header__list_item-earth">
-                            <a href="##"
+                            <a href="##" class="desktop-only"
                                 ><img
-                                    class="header__list_item-earth"
+                                    class="header__list_earh-img"
                                     src="./img/svg/earth.svg"
                                     alt="#" />
-                                РУ <img src="./img/svg/polygon.svg" alt="#"
+                                РУ  <img src="./img/svg/polygon.svg" alt="#"
                             /></a>
                             <ul class="header__lang_list">
+                                <li class="header__lang_item"><a href="##">РУ</a></li>
                                 <li class="header__lang_item"><a href="##">UZ</a></li>
                                 <li class="header__lang_item"><a href="##">EN</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <ul class="header__contacts">
+                    <ul class="header__contacts desktop-only">
                         <div class="header__contacts_numbers">
                             <a href="tel:+998555010526"
                                 ><span>+998 55 501-05-26</span></a
@@ -60,6 +77,21 @@
                             >
                         </div>
                         <a class="orange-button" href="##">Контакты</a>
+                    </ul>
+                    <ul class="header__info mobile-only">
+                        <li class="header__info_phone"><a href="tel:+998555010526">
+                            <img src="./img/svg/phone.svg" alt="#">
+                            +998 55 501-05-26
+                        </a></li>
+                        <li class="header__info_phone"><a href="tel:+998555010527">
+                            <img src="./img/svg/phone.svg" alt="#">
+                            +998 55 501-05-27
+                        </a></li>
+                        <li class="header__info_socials">
+                            <a href="##"><img src="./img/svg/header-telegram.svg" alt="#"></a>
+                            <a href="##"><img src="./img/svg/header-instagram.svg" alt="#"></a>
+                            <a href="##"><img src="./img/svg/header-facebook.svg" alt="#"></a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -115,6 +147,7 @@
                     </div>
                 </div>
                 <img style="width: 100%" src="./img/svg/fignya.svg" alt="#" />
+                <img src="./img/svg/main__polygon-mobile.svg" alt="#" class="main__polygon-mobile">
             </section>
             <section class="dist">
                 <div class="dist__container">
@@ -267,21 +300,23 @@
                             </a>
                             <span></span>
                         </div>
-                        <div class="key__cards">
-                            <div class="key__card">
-                                <div class="key__card_title">Широкая сеть филиалов</div>
-                                <div class="key__card_text">Филиалы в каждом областном центре Узбекистана, что обеспечивает максимальный охват рынка.</div>
-                                <div class="key__card_num">1</div>
-                            </div>
-                            <div class="key__card dark">
-                                <div class="key__card_title">Высокие стандарты качества</div>
-                                <div class="key__card_text">Строгий отбор продукции, соответствие мировым стандартам. Постоянное совершенствование логистики и сервиса.</div>
-                                <div class="key__card_num">2</div>
-                            </div>
-                            <div class="key__card">
-                                <div class="key__card_title">Широкая сеть филиалов</div>
-                                <div class="key__card_text">Открытые условия сотрудничества, доступ к информации и регулярная отчетность. Индивидуальный подход к каждому партнеру.</div>
-                                <div class="key__card_num">3</div>
+                        <div class="key__cards swiper-container">
+                            <div class="key__cards_wrapper swiper-wrapper">
+                                <div class="key__card swiper-slide">
+                                    <div class="key__card_title">Широкая сеть филиалов</div>
+                                    <div class="key__card_text">Филиалы в каждом областном центре Узбекистана, что обеспечивает максимальный охват рынка.</div>
+                                    <div class="key__card_num">1</div>
+                                </div>
+                                <div class="key__card dark swiper-slide">
+                                    <div class="key__card_title">Высокие стандарты качества</div>
+                                    <div class="key__card_text">Строгий отбор продукции, соответствие мировым стандартам. Постоянное совершенствование логистики и сервиса.</div>
+                                    <div class="key__card_num">2</div>
+                                </div>
+                                <div class="key__card swiper-slide">
+                                    <div class="key__card_title">Широкая сеть филиалов</div>
+                                    <div class="key__card_text">Открытые условия сотрудничества, доступ к информации и регулярная отчетность. Индивидуальный подход к каждому партнеру.</div>
+                                    <div class="key__card_num">3</div>
+                                </div>
                             </div>
                         </div>
                         <div class="key__title_box">
