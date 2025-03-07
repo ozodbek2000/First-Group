@@ -10,12 +10,9 @@ $(document).ready(function() {
     $('.header__burger').click(function(event) {
         $(this).toggleClass('active');
         $('.header__nav').toggleClass('active');
+        $('.header__list_item').removeClass('active');
     })
-    if ($(window).width() <= 767) {
-        $('.header__list_item').click(function(event) {
-            $(this).toggleClass('active');
-        });
-    }
+    
     $('.qa__dropdown_question').click(function(event) {
         $(this).parent('.qa__dropdown').toggleClass('active');
     })
@@ -55,7 +52,11 @@ $(document).ready(function() {
         },
         toggleServiceActive
     );
-    
+    if ($(window).width() <= 767) {
+        $('.header__list_item').click(function(event) {
+            $(this).toggleClass('active');
+        });
+    }
 })
 
 // SWIPERS
@@ -81,13 +82,18 @@ var keySwiper = new Swiper('.key__swiper', {
     }
 });
 var newsSwiper = new Swiper('.news__swiper', {
-    slidesPerView: 4,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     navigation: {
         nextEl: '.swiper__arrow-right',
         prevEl: '.swiper__arrow-left',
     },
     loop: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 4,
+        }
+    }
 });
 var gallerySwiper = new Swiper('.gallery-container', {
     slidesPerView: 4,
@@ -111,6 +117,10 @@ var keyCardsSwiper = new Swiper('.key__cards', {
     slidesPerView: 1,
     spaceBetween: 16,
     loop: true,
+    pagination: {
+        el: '.key__pagination',
+        clickable: true,
+    },
     breakpoints: {
         767: {
             slidesPerView: 3,
