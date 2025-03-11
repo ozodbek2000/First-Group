@@ -12,45 +12,62 @@
     <body>
         <header class="header">
             <div class="header__container">
-                <a href="./index.html" class="header__logo">
-                    <img src="./img/svg/logo.png" alt="logo" />
-                </a>
+                <div class="header__logo_box">
+                    <a href="./index.html" class="header__logo">
+                        <img src="./img/svg/logo.png" alt="logo" />
+                    </a>
+                    <div class="header__burger">
+
+                    </div>
+                </div>
                 <nav class="header__nav">
                     <ul class="header__list">
+                        <li class="mobile-only">Навигация</li>
                         <li class="header__list_item">
-                            <a href="##">Главная</a>
+                            <a href="./index.html">Главная</a>
                         </li>
                         <li class="header__list_item">
                             <a href="##"
                                 >Услуги
-                                <img src="./img/svg/polygon.svg" alt="#"
-                            /></a>
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 5.5L9.33013 0.25H0.669873L5 5.5Z" fill="white" fill-opacity="0.5"/>
+                                </svg>
+                            </a>
+                            <ul class="header__list_services">
+                                <li class="header__list_service"><a href="./distribution.html">Дистрибьюция</a></li>
+                                <li class="header__list_service"><a href="./logistics.html">Логистика и склад</a></li>
+                                <li class="header__list_service"><a href="./support.html">Маркетинговая поддержка</a></li>
+                                <li class="header__list_service"><a href="./management.html">Управление продажами</a></li>
+                                <li class="header__list_service"><a href="./consulting.html">Консалтинговые услуги</a></li>
+                                <li class="header__list_service"><a href="./service.html">Сервисная поддержка</a></li>
+                            </ul>
                         </li>
                         <li class="header__list_item">
-                            <a href="##">О компании</a>
+                            <a href="./about.html">О компании</a>
                         </li>
                         <li class="header__list_item">
-                            <a href="##">Партнеры</a>
+                            <a href="./partners.html">Партнеры</a>
                         </li>
                         <li class="header__list_item">
-                            <a href="##">Карьера</a>
+                            <a href="./career.html">Карьера</a>
                         </li>
-                        <li class="header__list_item"><a href="##">Блог</a></li>
+                        <li class="header__list_item"><a href="./news.html">Блог</a></li>
                         <li class="header__list_item header__list_item-earth">
-                            <a href="##"
+                            <a href="##" class="desktop-only"
                                 ><img
-                                    class="header__list_item-earth"
+                                    class="header__list_earh-img"
                                     src="./img/svg/earth.svg"
                                     alt="#" />
-                                РУ <img src="./img/svg/polygon.svg" alt="#"
+                                РУ  <img src="./img/svg/polygon.svg" alt="#"
                             /></a>
                             <ul class="header__lang_list">
+                                <li class="header__lang_item"><a href="##">РУ</a></li>
                                 <li class="header__lang_item"><a href="##">UZ</a></li>
                                 <li class="header__lang_item"><a href="##">EN</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <ul class="header__contacts">
+                    <ul class="header__contacts desktop-only">
                         <div class="header__contacts_numbers">
                             <a href="tel:+998555010526"
                                 ><span>+998 55 501-05-26</span></a
@@ -60,6 +77,21 @@
                             >
                         </div>
                         <a class="orange-button" href="##">Контакты</a>
+                    </ul>
+                    <ul class="header__info mobile-only">
+                        <li class="header__info_phone"><a href="tel:+998555010526">
+                            <img src="./img/svg/phone.svg" alt="#">
+                            +998 55 501-05-26
+                        </a></li>
+                        <li class="header__info_phone"><a href="tel:+998555010527">
+                            <img src="./img/svg/phone.svg" alt="#">
+                            +998 55 501-05-27
+                        </a></li>
+                        <li class="header__info_socials">
+                            <a href="##"><img src="./img/svg/header-telegram.svg" alt="#"></a>
+                            <a href="##"><img src="./img/svg/header-instagram.svg" alt="#"></a>
+                            <a href="##"><img src="./img/svg/header-facebook.svg" alt="#"></a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -290,31 +322,28 @@
                         <li class="footer__main_text">НА РЫНКЕ С 1995</li>
                         <li class="footer__main_title">КРУПНЕЙШИЙ ДИСТРИБЬЮТОР FMCG </li>
                         <li class="footer__main_subtitle">Дистрибьюция</li>
-                        <li class="footer__main_logo">
-                            <a href="##"><img src="./img/png/footer/footer-logo.png" alt="#"></a>
-                        </li>
                     </ul>
                     <ul class="footer__list">
                         <li class="footer__list_item">Навигация</li>
-                        <li class="footer__list_item"><a href="##">Главная</a></li>
-                        <li class="footer__list_item"><a href="##">О компании</a></li>
-                        <li class="footer__list_item"><a href="##">Партнеры</a></li>
-                        <li class="footer__list_item"><a href="##">Карьера</a></li>
-                        <li class="footer__list_item"><a href="##">Новости</a></li>
-                        <li class="footer__list_item"><a href="##">Контакты</a></li>
+                        <li class="footer__list_item"><a href="./index.html">Главная</a></li>
+                        <li class="footer__list_item"><a href="./about.html">О компании</a></li>
+                        <li class="footer__list_item"><a href="./partners.html">Партнеры</a></li>
+                        <li class="footer__list_item"><a href="./career.html">Карьера</a></li>
+                        <li class="footer__list_item"><a href="./news.html">Новости</a></li>
+                        <li class="footer__list_item"><a href="./contacts.html">Контакты</a></li>
                     </ul>
                     <ul class="footer__list">
                         <li class="footer__list_item">Услуги</li>
-                        <li class="footer__list_item"><a href="##">Дистрибьюция</a></li>
-                        <li class="footer__list_item"><a href="##">Логистика и склад</a></li>
-                        <li class="footer__list_item"><a href="##">Маркетинговая поддержка</a></li>
-                        <li class="footer__list_item"><a href="##">Управление продажами</a></li>
-                        <li class="footer__list_item"><a href="##">Консалтинговые услуги</a></li>
-                        <li class="footer__list_item"><a href="##">Сервисная поддержка</a></li>
+                        <li class="footer__list_item"><a href="./distribution.html">Дистрибьюция</a></li>
+                        <li class="footer__list_item"><a href="./logistics.html">Логистика и склад</a></li>
+                        <li class="footer__list_item"><a href="./support.html">Маркетинговая поддержка</a></li>
+                        <li class="footer__list_item"><a href="./management.html">Управление продажами</a></li>
+                        <li class="footer__list_item"><a href="./consulting.html">Консалтинговые услуги</a></li>
+                        <li class="footer__list_item"><a href="./service.html">Сервисная поддержка</a></li>
                     </ul>
-                    <ul class="footer__list">
+                    <ul class="footer__list footer__list_info">
                         <li class="footer__list_item">Обратная связь</li>
-                        <li class="footer__list_item"><a href="##">
+                        <li class="footer__list_item footer__list_phone"><a href="tel:+998555010526">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_48_140)">
                                 <path d="M9.62505 13.9998C10.5642 13.9998 11.4334 13.644 12.0809 12.9965L13.9301 11.1473L10.2784 7.48982L8.28922 9.47899C6.56255 8.73232 5.32589 7.48982 4.52672 5.70482L6.51589 3.71566L2.85255 0.0698242L1.00339 1.91899C0.355886 2.56066 5.34058e-05 3.43566 5.34058e-05 4.37482C5.34058e-05 8.60399 5.39589 13.9998 9.62505 13.9998Z" fill="white"/>
@@ -327,7 +356,7 @@
                             </svg>                                
                             <span>+998 55 501-05-26</span>
                         </a></li>
-                        <li class="footer__list_item"><a href="##">
+                        <li class="footer__list_item footer__list_phone"><a href="tel:+998555010527">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_48_140)">
                                 <path d="M9.62505 13.9998C10.5642 13.9998 11.4334 13.644 12.0809 12.9965L13.9301 11.1473L10.2784 7.48982L8.28922 9.47899C6.56255 8.73232 5.32589 7.48982 4.52672 5.70482L6.51589 3.71566L2.85255 0.0698242L1.00339 1.91899C0.355886 2.56066 5.34058e-05 3.43566 5.34058e-05 4.37482C5.34058e-05 8.60399 5.39589 13.9998 9.62505 13.9998Z" fill="white"/>
@@ -340,7 +369,7 @@
                             </svg>                                
                             <span>+998 55 501-05-27</span>
                         </a></li>
-                        <li class="footer__list_item"><a href="##">
+                        <li class="footer__list_item footer__list_phone"><a href="mailto:info@ayvengroup.com">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_48_155)">
                                 <path d="M11.6667 12.2497V13.4163H0V4.08301C0 3.32467 0.49 2.68301 1.16667 2.43801V12.2497H11.6667ZM6.93 5.31967C7.6125 6.00217 8.72083 6.00217 9.40333 5.31967L13.5508 1.17217C13.23 0.810508 12.7692 0.583008 12.25 0.583008H4.08333C3.56417 0.583008 3.10333 0.816341 2.7825 1.17217L6.93 5.31967ZM10.2317 6.14217C9.66583 6.70801 8.91333 6.99384 8.16667 6.99384C7.42 6.99384 6.67333 6.70801 6.10167 6.14217L2.33333 2.37384V11.083H14V2.37384L10.2317 6.14217Z" fill="white"/>
@@ -354,7 +383,7 @@
                             <span>info@ayvengroup.com</span>
                         </a></li>
                         <li class="footer__list_item"><div>Адрес: г. Ташкент, Мирабадский район, улица Файзиабад, 3-проезд, «База»</div></li>
-                        <li class="footer__list_item"><a href="##">Оставить заявку</a></li>
+                        <li class="footer__list_item footer__list_application"><a href="##">Оставить заявку</a></li>
                         <div class="footer__socials">
                             <a href="##">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -396,8 +425,13 @@
                     </ul>
                 </div>
                 <div class="footer__dev">
-                    <p>© ООО «Ayven Group» 2025. Все права защищены.</p>
-                    <a href="##">
+                    <li class="footer__main_logo">
+                        <a href="./index.html"><img src="./img/png/footer/footer-logo.png" alt="#"></a>
+
+                        <p>© ООО «Ayven Group» 2025. Все права защищены.</p>
+                    </li>
+                    <a href="./confidence.html">Политика конфиденциальности</a>
+                    <a href="https://icorp.uz/web">
                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_48_137)">
                             <path d="M7.8537 15H5.44932L6.69932 10H4.1162C3.86656 9.9999 3.6204 9.9414 3.3974 9.82919C3.1744 9.71698 2.98074 9.55417 2.83189 9.35376C2.68304 9.15335 2.58313 8.9209 2.54014 8.67499C2.49716 8.42908 2.51229 8.17652 2.58432 7.9375L4.98495 0H10.9018L9.02682 5H11.5412C11.8273 5.00018 12.108 5.07788 12.3534 5.22482C12.5988 5.37177 12.7999 5.58248 12.9352 5.83456C13.0704 6.08663 13.1349 6.37064 13.1216 6.65641C13.1084 6.94218 13.0179 7.21902 12.8599 7.4575L7.8537 15Z" fill="white" fill-opacity="0.5"/>
