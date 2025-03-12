@@ -109,13 +109,20 @@ var gallerySwiper = new Swiper(".gallery-container", {
     },
 });
 var compSwiper = new Swiper(".comp__swiper", {
-    slidesPerView: 7,
-    spaceBetween: 16,
+    slidesPerView: 3.5,
+    spaceBetween: 20,
     navigation: {
         nextEl: ".comp__arrow-right",
         prevEl: ".comp__arrow-left",
     },
     loop: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 7,
+            spaceBetween: 26.5,
+
+        },
+    },
 });
 var keyCardsSwiper = new Swiper(".key__cards", {
     slidesPerView: 1,

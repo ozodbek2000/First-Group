@@ -2572,7 +2572,7 @@ body{
   border-radius: 100px;
   transition: 0.3s ease all;
   font-weight: 600;
-  
+  margin-top: 29px;
 }
 .post__button:hover {
   background-color: var(--secondary);
@@ -2690,6 +2690,22 @@ body{
 .career__subtitle {
   max-width: 635px;
 }
+@media (max-width: 767px) {
+  .contact {
+    margin: 69px 0px 150px 0px;
+  }
+  .contact__columns {
+    flex-direction: column;
+    gap: 69px;
+  }
+  .contact__location {
+    margin: 0px 0px 32px 0px;
+    justify-content: flex-start;
+  }
+  .contact__map_map iframe {
+    height: 380px;
+  }
+}
 /* VACANCY SECTION ============================================================================ */
 .vacancy {
   margin: -140px 0px 114px 0px;
@@ -2717,7 +2733,7 @@ body{
 .qa--career {
   margin-top: -180px;
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 .vacancy-container {
   align-items: center;
@@ -2859,6 +2875,9 @@ body{
   overflow: hidden;
   position: relative;
 }
+.vacancy__image > img {
+  width: 100%;
+}
 .vacancy__button {
   height: 70px;
   width: 70px;
@@ -2873,6 +2892,46 @@ body{
   transition: 0.3s ease all;
 }
 .vacancy__image {
+}
+@media (max-width: 767px) {
+  .main > .career-img {
+    display: inherit;
+  }
+  .vacancy-career > img {
+    position: absolute;
+    top: inherit;
+    left: 0;
+    width: 100%;
+    bottom: 96%;
+  }
+  .vacancy.vacancy-career {
+  }
+  .vacancy__columns {
+    padding: 51px 0px;
+    margin: 51px 0px 68px 0px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .vacancy__titles {
+    gap: 10px;
+  }
+  .vacancy_box_title {
+    font-size: 23px;
+  }
+  .vacancy__box_subtitle {
+    font-size: 12px;
+  }
+  .vacancy__user {
+    display: none;
+  }
+  .vacancy__cards {
+    margin-top: 36px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .vacancy {
+    margin-bottom: 127px;
+  }
 }
 /* WORK SECTION ============================================================================== */
 .work {
@@ -2912,6 +2971,20 @@ body{
   display: flex;
   flex-direction: column;
   gap: 13px;
+}
+@media (max-width: 767px) {
+    .work__columns {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 53px;
+      margin-bottom: 0;
+      gap: 27px;
+    }
+    .work__cards {
+      display: none;
+    }
+    .work {
+      margin-bottom: 136px;
+    }
 }
 /* REP SECTION ============================================================================== */
 .rep {
@@ -3146,6 +3219,7 @@ body{
   background-color: #fff;
   border: 1px solid #e0e0e0;
   cursor: pointer;
+  flex: 0 0 22px;
 }
 .rep__buttons > input[type="checkbox"]:checked {
   appearance: none;
@@ -3157,6 +3231,53 @@ body{
   background-image: url(../img/svg/checked.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.rep__buttons a {
+  text-decoration: underline !important;
+  color: #4a4a4d !important;
+}
+@media (max-width: 767px) {
+  .rep__columns {
+    grid-template-columns: 1fr;
+    gap: 77px;
+  }
+  .rep__title {
+    margin-bottom: 46px;
+  }
+  .rep__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .rep__app_load {
+    max-width: 100%;
+  }
+  .rep__app_info span {
+    max-width: 100%;
+  } 
+  .rep__buttons {
+  }
+  .rep__buttons > label {
+  }
+  .rep__buttons > button {
+  }
+  .rep__submit {
+    width: 100%;
+    margin-top: 52px;
+  }
+  .rep__app {
+    margin: 0px -15px;
+  }
+  .career-eng__main2 > img{
+    display: block !important; 
+    object-position: 70%;
+  }
+  .vacancy-buttons {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .vacancy-buttons > a {
+    flex: 1 0 187px;
+  }
 }
 /* DISTR SECTION ============================================================================= */
 .distr {
@@ -3310,6 +3431,46 @@ body{
   color: var(--additional);
   opacity: 0.5;
 }
+@media (max-width: 767px) {
+  .distr {
+    margin: 69px 0px;
+  }
+  .distr__columns {
+    padding-top: 45px;
+    padding-bottom: 0;
+    margin-top: 45px;
+    margin-bottom: 55px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .distr__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .distr__buttons .main-button {
+    max-width: 282px;
+    width: 100%;
+  }
+  .distr__bg {
+    margin-top: 65px;
+  }
+  .distr__cards {
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 24px;
+    row-gap: 50px;
+  }
+  .distr__card_title {
+    font-size: 50px;
+  }
+  .distr__card_subtitle {
+    line-height: 26px;
+    margin: 0px 0px 12px 0px;
+  }
+  .distr__card_text {
+    line-height: 19px;
+  }
+}
 /* MOVE SECTION =================================================================================== */
 .move {
   margin-bottom: 120px;
@@ -3340,6 +3501,20 @@ body{
   font-size: 16px;
   color: black;
   line-height: 22px;
+}
+@media (max-width: 767px) {
+  .move__columns {
+    padding-top: 45px;
+    margin-top: 45px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .move {
+    margin-bottom: 104px;
+  }
+  .comp__swiper {
+    overflow: visible !important;
+  }
 }
 /* COMP SECTION ================================================================================== */
 .comp {
@@ -3410,4 +3585,13 @@ body{
   height: 5px;  
   border-radius: 50%;
   background-color: #000;
+}
+@media (max-width: 767px) {
+    .confidence__ol {
+      margin-top: 56px;
+    }
+    .confidence {
+      margin-bottom: 242px;
+      margin-top: 69px;
+    }
 }
