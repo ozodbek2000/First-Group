@@ -11,11 +11,15 @@ $(document).ready(function () {
         $(this).toggleClass("active");
         $(".header__nav").toggleClass("active");
         $(".header__list_item").removeClass("active");
+        $("body").toggleClass("lock");
     });
 
-    $(".qa__dropdown_question").click(function (event) {
+    $(".qa__dropdown_question").click(function() {
+        $(".qa__dropdown").not($(this).parent()).removeClass("active");
+    
         $(this).parent(".qa__dropdown").toggleClass("active");
     });
+    
     $(document).click(function (event) {
         if (!$(event.target).closest(".header__burger, .header__nav").length) {
             $(".header__burger").removeClass("active");
@@ -63,12 +67,14 @@ var swiper = new Swiper(".main__swiper", {
     slidesPerView: 1,
     loop: true,
     autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
     },
+    speed: 400,
 });
 var keySwiper = new Swiper(".key__swiper", {
     slidesPerView: 3.5,
+    loop: true,
     spaceBetween: 16,
     navigation: {
         nextEl: ".key__arrow-right",
@@ -141,6 +147,7 @@ var keyCardsSwiper = new Swiper(".key__cards", {
 var logosSwiper = new Swiper(".logos__cards", {
     slidesPerView: 3.5,
     spaceBetween: 20,
+    loop: true,
     grid: {
         rows: 1,
         fill: 'row',
@@ -175,21 +182,25 @@ if ($(window).width() <= 767) {
         },
     });
 }
+
 // INPUT TEL LIBRARY
 document.addEventListener("DOMContentLoaded", function () {
-    var input = document.querySelector(".form_number");
-    window.intlTelInput(input, {
-        initialCountry: "auto",
-        geoIpLookup: function (callback) {
-            fetch("https://ipinfo.io/json")
-                .then((response) => response.json())
-                .then((data) => callback(data.country))
-                .catch(() => callback("us"));
-        },
-        utilsScript:
-            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    var inputs = document.querySelectorAll(".form_number, .partners_phone");
+    inputs.forEach(function (input) {
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                fetch("https://ipinfo.io/json")
+                    .then((response) => response.json())
+                    .then((data) => callback(data.country))
+                    .catch(() => callback("us"));
+            },
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
     });
 });
+
 // INPUT FILES FUNCTION
 document.querySelectorAll(".rep__card").forEach((card) => {
     const fileInput = card.querySelector(".rep__card_file");
@@ -242,4 +253,42 @@ document.querySelectorAll(".rep__card").forEach((card) => {
         uploadedFiles.forEach((file) => newFileList.items.add(file));
         fileInput.files = newFileList.files;
     }
+});
+
+// NUMBER ANIMATION 
+$(document).ready(function () {
+    const counters = $('.key__column_title, .about__number_title');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = $(entry.target);
+                const updateCount = () => {
+                    const target = +counter.data('count');
+                    const count = +counter.text().replace('+', '');
+                    const speed = 500; // change animation speed here
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.text(Math.ceil(count + increment) + '+');
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.text(target + '+');
+                    }
+                };
+                updateCount();
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    counters.each(function () {
+        observer.observe(this);
+    });
 });
