@@ -552,7 +552,6 @@ body{
     border-radius: 30px;
     align-items: flex-start;
     height: auto;
-    z-index: 99;
     padding: 40px 38px 40px;
     gap: 0;
     opacity: 0;
@@ -562,13 +561,14 @@ body{
 
     position: fixed;
     top: 103px;
-    z-index: 99;
     overflow: scroll;
     max-height: 80dvh;
+    z-index: -1;
   }
   .header__nav.active {
     visibility: visible;
     opacity: 1;  
+    z-index: 99;
   }
   .header__list {
     width: 100%;
@@ -684,9 +684,13 @@ body{
     line-height: 22px;
   }
   .header__lang_list {
+    transition: 0.3s ease all;
+    visibility: hidden;
+    position: relative !important;
+  }
+  .header__nav.active .header__lang_list {
     opacity: 1 !important;
     visibility: visible !important;
-    position: relative !important;
   }
   .header__info {
 
@@ -860,13 +864,18 @@ body{
   }
 }
 .main__slide {
-  animation: scaleAnimation 25s infinite;
+  animation: scaleAnimation 30s infinite;
 }
 .main__slide.swiper-slide-active {
   z-index: 2;
 }
 .main__polygon-mobile {
   display: none;
+}
+@media (max-height: 740px) {
+  .main {
+    padding-bottom: 170px !important;
+  }
 }
 @media (max-width: 767px) {
   .main {
@@ -877,6 +886,7 @@ body{
   }
   .main__slide {
     height: 100%;
+    animation: none;
   }
   .main__title {
     line-height: 36px;
@@ -1231,8 +1241,11 @@ body{
   }
   .key__columns {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 0px;
     margin: 48px 0px 77px 0px;  
+  }
+  .key__column {
+    max-width: 93%;
   }
   .key__column_title {
     font-size: 50px;
@@ -2028,7 +2041,7 @@ body{
 }
 .about__number_text {
   font-weight: 500;
-  line-height: 130%;
+  line-height: 19px;
   color: #838CB1;
   max-width: 256px;
 }
@@ -2828,7 +2841,7 @@ body{
 }
 .career-eng__main > img {
   height: 100%;
-  animation: scaleAnimation 25s infinite;
+  animation: scaleAnimation 30s infinite;
 }
 
 @keyframes scaleAnimation {
@@ -2976,6 +2989,7 @@ body{
 @media (max-width: 767px) {
   .main > .career-img {
     display: inherit;
+    z-index: -1;
   }
   .vacancy-career > img {
     position: absolute;
@@ -2985,6 +2999,9 @@ body{
     bottom: 96%;
   }
   .vacancy.vacancy-career {
+  }
+  .career-eng__main > img {
+    animation: none;
   }
   .vacancy__columns {
     padding: 51px 0px;
@@ -3520,6 +3537,7 @@ body{
   font-weight: 500;
   color: var(--additional);
   opacity: 0.5;
+  line-height: 19px;
 }
 @media (max-width: 767px) {
   .distr {
@@ -3547,8 +3565,11 @@ body{
   }
   .distr__cards {
     grid-template-columns: repeat(2 , 1fr);
-    column-gap: 24px;
+    column-gap: 0px;
     row-gap: 50px;
+  }
+  .distr__card {
+    max-width: 92%;
   }
   .distr__card_title {
     font-size: 50px;

@@ -257,7 +257,7 @@ document.querySelectorAll(".rep__card").forEach((card) => {
 
 // NUMBER ANIMATION 
 $(document).ready(function () {
-    const counters = $('.key__column_title, .about__number_title');
+    const counters = $('.key__column_title, .about__number_title, .distr__card_title');
     const options = {
         root: null,
         rootMargin: '0px',
