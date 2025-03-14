@@ -872,9 +872,9 @@ body{
 .main__polygon-mobile {
   display: none;
 }
-@media (max-height: 740px) {
+@media (max-height: 767px) {
   .main {
-    padding-bottom: 170px !important;
+    padding-bottom: 100px !important;
   }
 }
 @media (max-width: 767px) {
