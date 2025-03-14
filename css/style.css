@@ -750,7 +750,7 @@ body{
   background-size: cover;
   background-position: center;
   padding-top: 200px;
-  height: calc(100vh + 140px);
+  height: calc(100vh + 85px);
   padding-bottom: 280px;
   min-width: 0;
   position: relative;
@@ -880,7 +880,7 @@ body{
 @media (max-width: 767px) {
   .main {
     padding-bottom: 200px;
-  }
+  } 
   .main__swiper {
     height: 100%;
   }
