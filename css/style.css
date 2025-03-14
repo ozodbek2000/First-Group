@@ -879,7 +879,7 @@ body{
 }
 @media (max-width: 767px) {
   .main {
-    padding-bottom: 130px;
+    padding-bottom: 150px;
     height: calc(100vh + 74px);
   } 
   .main__swiper {
