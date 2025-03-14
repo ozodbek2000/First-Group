@@ -860,7 +860,7 @@ body{
   }
 }
 .main__slide {
-  animation: scaleAnimation 15s infinite;
+  animation: scaleAnimation 25s infinite;
 }
 .main__slide.swiper-slide-active {
   z-index: 2;
@@ -1057,6 +1057,8 @@ body{
   left: 0;
   width: 100%;
   z-index: -1;
+  height: 100%;
+  object-fit: cover;
 }
 .key__subtitle {
   margin-bottom: 29px;
@@ -2826,7 +2828,7 @@ body{
 }
 .career-eng__main > img {
   height: 100%;
-  animation: scaleAnimation 15s infinite;
+  animation: scaleAnimation 25s infinite;
 }
 
 @keyframes scaleAnimation {
