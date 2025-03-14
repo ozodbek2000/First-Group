@@ -2837,12 +2837,13 @@ body{
 }
 
 .career-eng__main {
-  height: calc(100dvh + 240px) !important;
-  padding-bottom: 400px;
+  height: calc(100vh + 180px) !important;
+  padding-bottom: 360px;
 }
 .career-eng__main > img {
   height: 100%;
   animation: scaleAnimation 30s infinite;
+  object-position: 70%;
 }
 
 @keyframes scaleAnimation {
@@ -2998,6 +2999,10 @@ body{
     left: 0;
     width: 100%;
     bottom: 96%;
+  }
+  .career-eng__main {
+    height: calc(100dvh + 100px) !important;
+    padding-bottom: 300px;
   }
   .vacancy.vacancy-career {
   }
