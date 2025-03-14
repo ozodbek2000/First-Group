@@ -750,7 +750,7 @@ body{
   background-size: cover;
   background-position: center;
   padding-top: 200px;
-  height: calc(100dvh + 140px);
+  height: calc(100vh + 140px);
   padding-bottom: 280px;
   min-width: 0;
   position: relative;
