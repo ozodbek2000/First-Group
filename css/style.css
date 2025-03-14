@@ -874,7 +874,7 @@ body{
 }
 @media (max-height: 740px) {
   .main {
-    padding-bottom: 170px !important;
+    padding-bottom: 200px !important;
   }
 }
 @media (max-width: 767px) {
