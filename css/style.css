@@ -632,10 +632,9 @@ body{
     margin: 15px 0px 55px 0px;
   }
   .header__list_item-earth.active .header__lang_list {
-    top: 30px;
+    top: 0px !important;
     opacity: 1;
     visibility: visible;
-    
   }
   .header__lang_list {
     display: flex;
