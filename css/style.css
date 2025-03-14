@@ -874,12 +874,12 @@ body{
 }
 @media (max-height: 740px) {
   .main {
-    padding-bottom: 200px !important;
+    padding-bottom: 170px !important;
   }
 }
 @media (max-width: 767px) {
   .main {
-    padding-bottom: 160px;
+    padding-bottom: 200px;
   }
   .main__swiper {
     height: 100%;
