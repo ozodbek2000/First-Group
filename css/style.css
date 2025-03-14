@@ -2792,7 +2792,7 @@ body{
   padding-top: 132px;
   background-size: contain;
   background-position: top;
-  z-index: 1;
+  z-index: 0;
 }
 .vacancy__main {
   height: 101dvh !important;
