@@ -3,8 +3,10 @@ $(document).ready(function () {
         $(this).toggleClass("active");
         if ($(this).hasClass("active")) {
             swiper.autoplay.stop(); // Stop autoplay if active
+            $(".main__slide").css("animation-play-state", "paused"); // Pause animation
         } else {
             swiper.autoplay.start(); // Start autoplay if not active
+            $(".main__slide").css("animation-play-state", "running"); // Resume animation
         }
     });
     $(".header__burger").click(function (event) {
